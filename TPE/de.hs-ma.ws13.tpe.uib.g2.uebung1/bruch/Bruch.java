@@ -1,4 +1,4 @@
-package tpe_uib_g2_ue1_h0506_1314;
+package bruch;
 
 /**
  * @author Johannes Weber
