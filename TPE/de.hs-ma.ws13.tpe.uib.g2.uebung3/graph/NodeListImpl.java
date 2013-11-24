@@ -7,10 +7,11 @@ import interfaces.NodeList;
  * Dieser liste ist es nur erlaubt Node (Knoten) aufzunehmen. Im Vergleich dazu
  * darf die Klasse ListImpl alle Datentypen aufnehmen.
  * 
- * @author Johannes
+ * @author Johannes Weber
+ * @author Amanpreet Singh Chahota
  * 
  * @param <T>
- *            Ein beliebiger Dtentyp
+ *            Ein beliebiger Datentyp
  */
 
 public class NodeListImpl<T> extends ListImpl<Node<T>> implements NodeList<T> {
