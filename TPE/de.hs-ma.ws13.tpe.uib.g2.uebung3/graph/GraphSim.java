@@ -1,5 +1,9 @@
 package graph;
 
+/**
+ * @author Johannes Weber
+ * @author Amanpreet Singh Chahota
+ */
 public class GraphSim {
 
 	public static <T> void main(String[] args) {
@@ -33,7 +37,7 @@ public class GraphSim {
 		k.addChild(d);
 		j.addChild(i);
 		e.addChild(i);
-		e.addChild(h);
+		e.addChild(k);
 		h.addChild(b);
 
 		Graph<String> graph = new Graph<String>(a);
@@ -43,8 +47,5 @@ public class GraphSim {
 		
 		System.out.println(graph.search(k, tiefensuche));
 		System.out.println("Tiefensuche: " + tiefensuche.getPath());
-		
-//?????	System.out.println(graph.copyInto(list));
-
 	}
 }

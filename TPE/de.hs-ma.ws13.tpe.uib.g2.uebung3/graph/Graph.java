@@ -17,11 +17,10 @@ import interfaces.SearchStrategy;
 public class Graph<T> {
 
 	private Node<T> firstNode;
-	private NodeListImpl<T> all = new NodeListImpl<T>();
 
 	/**
 	 * Konstruktor eines Graphen
-	 *
+	 * 
 	 * @param firstNode
 	 *            der Knoten mit welchem der Graph beginnen soll.
 	 */
@@ -31,15 +30,13 @@ public class Graph<T> {
 
 	/**
 	 * @param search
-	 *            der Knoten nach welchem gesucht werden soll.
+	 *            der Knoten der gesucht werden soll.
 	 * @param strategy
 	 *            die gewaehlte Suchstrategie
 	 * @return Eine Liste der uebereinstimmenden Knoten
 	 */
 	public NodeListImpl<T> search(Node<T> search, SearchStrategy<T> strategy) {
-		NodeListImpl<T> found = new NodeListImpl<T>();
-		found = strategy.search(this.firstNode, search);
-		return found;
+		return strategy.search(this.firstNode, search);
 	}
 
 	/**
@@ -50,17 +47,36 @@ public class Graph<T> {
 	 * @return die neue gefuellte Liste
 	 */
 	public NodeListImpl<T> copyInto(NodeListImpl<T> list) {
-		for(Node<T> it : this.all){
-			list.add(it);
+		return copyIntoRek(this.firstNode, list);
+	}
+
+	/**
+	 * Eigentliche Rekursive Methode. In dieser Methode wird nochmal mit der
+	 * Tiefensuche durch den Graphen gegangen um die einzelnen Knoten in einer
+	 * separaten Liste zu speichern.
+	 * 
+	 * @param start
+	 *            Der Anfangspunkt
+	 * @param list
+	 *            Die Liste in welche kopiert wird
+	 * @return eine neue Liste
+	 */
+	private NodeListImpl<T> copyIntoRek(Node<T> start, NodeListImpl<T> list) {
+		if (start != null) {
+			if (!list.contains(start)) {
+				list.add(start);
+				for (Node<T> it : start.getChildren()) {
+					copyIntoRek(it, list);
+				}
+			}
 		}
 		return list;
 	}
-	
+
 	/**
-	 * 
 	 * @return liefert den Anfangsknoten
 	 */
-	public Node<T> getFirstNode(){
+	public Node<T> getFirstNode() {
 		return this.firstNode;
 	}
 }

@@ -45,7 +45,6 @@ public class Node<T> {
 	}
 
 	/**
-	 * 
 	 * @return eine Liste aller Kinder des Knotens
 	 */
 	public NodeListImpl<T> getChildren() {
@@ -53,7 +52,6 @@ public class Node<T> {
 	}
 
 	/**
-	 * 
 	 * @return der Name des Knotens
 	 */
 	public String getName() {
@@ -68,7 +66,6 @@ public class Node<T> {
 	}
 
 	/**
-	 * 
 	 * @param true = Knoten wurde besucht, false = Knoten wurde nicht besucht
 	 */
 	public void setVisited(Boolean set) {
@@ -82,9 +79,13 @@ public class Node<T> {
 		return this.visited;
 	}
 
+	/**
+	 * ueberschreibt die vorhandene toString Methode und gibt dadurch einen
+	 * leserlichen Wert aus.
+	 */
 	@Override
 	public String toString() {
 		return name;
 	}
-	
+
 }

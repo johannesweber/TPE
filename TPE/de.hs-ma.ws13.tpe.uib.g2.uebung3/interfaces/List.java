@@ -1,5 +1,10 @@
 package interfaces;
 
-public interface List<T>{
+/**
+ * 
+ * @author Johannes Weber
+ * @author Amanpreet Singh Chahota
+ */
+public interface List<T> {
 
 }

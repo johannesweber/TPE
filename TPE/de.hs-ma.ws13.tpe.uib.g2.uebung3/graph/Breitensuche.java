@@ -27,9 +27,9 @@ public class Breitensuche<T> implements SearchStrategy<T> {
 		Node<T> tempNode;
 		NodeListImpl<T> tmpList = new NodeListImpl<T>();
 		NodeListImpl<T> found = new NodeListImpl<T>();
-		
+
 		this.path.clear();
-		this.path.add(firstNode);
+		this.path.add((Node<T>) firstNode);
 
 		if (search.getValue().equals(firstNode.getValue())) {
 			found.add(firstNode);
@@ -38,16 +38,16 @@ public class Breitensuche<T> implements SearchStrategy<T> {
 			while (!tmpList.isEmpty()) {
 				tempNode = tmpList.removeFirst();
 				tempNode.setVisited(true);
-					for (Node<T> it : tempNode.getChildren()) {
-						if (!it.isVisited()) {
-							it.setVisited(true);
-							tmpList.add(it);
-							this.path.add(it);
-							if (search.getValue().equals(it.getValue())) {
-								found.add(it);
-							}
-						}
+				for (Node<T> it : tempNode.getChildren()) {
+					if (search.getValue().equals(it.getValue())) {
+						found.add(it);
 					}
+					if (!it.isVisited()) {
+						it.setVisited(true);
+						tmpList.add(it);
+						this.path.add(it);
+					}
+				}
 			}
 		}
 		clean();
@@ -65,9 +65,14 @@ public class Breitensuche<T> implements SearchStrategy<T> {
 		return this.path;
 
 	}
-	
-	private void clean(){
-		for(Node<T> it : this.path){
+
+	/**
+	 * Diese Methode sorgt dafuer dass alle zuvor gefundenen Knoten als nicht
+	 * gefunden (false) markiert werden. Diese Methode wird nur innerhalb der
+	 * Breitensuche verwendet und ist deshalb private.
+	 */
+	private void clean() {
+		for (Node<T> it : this.path) {
 			it.setVisited(false);
 		}
 	}

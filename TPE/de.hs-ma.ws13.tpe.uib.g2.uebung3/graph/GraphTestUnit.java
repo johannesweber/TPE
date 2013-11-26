@@ -4,6 +4,10 @@ import static org.junit.Assert.*;
 
 import org.junit.Test;
 
+/**
+ * @author Johannes Weber
+ * @author Amanpreet Singh Chahota
+ */
 public class GraphTestUnit {
 
 	@Test
@@ -105,6 +109,8 @@ public class GraphTestUnit {
 		
 		assertEquals(first, graph.search(a, breitensuche));
 		assertEquals(first, graph.search(a, tiefensuche));
+		
+		assertEquals(tiefen, graph.copyInto(copy));
 	}
 
 }

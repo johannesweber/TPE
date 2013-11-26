@@ -32,5 +32,4 @@ public interface SearchStrategy<T> {
 	 * @return NodeListImpl<T> liefert den Pfad der letzen Suche zurueck
 	 */
 	abstract NodeListImpl<T> getPath();
-
 }
