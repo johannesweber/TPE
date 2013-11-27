@@ -8,8 +8,6 @@ public class GraphSim {
 
 	public static <T> void main(String[] args) {
 		
-		NodeListImpl<String> list= new NodeListImpl<String>();
-		
 		Tiefensuche<String> tiefensuche = new Tiefensuche<String>();
 		Breitensuche<String> breitensuche = new Breitensuche<String>();
 		Node<String> a = new Node<String>("A", "A");
@@ -37,7 +35,7 @@ public class GraphSim {
 		k.addChild(d);
 		j.addChild(i);
 		e.addChild(i);
-		e.addChild(k);
+		e.addChild(h);
 		h.addChild(b);
 
 		Graph<String> graph = new Graph<String>(a);

@@ -27,17 +27,14 @@ public class Tiefensuche<T> implements SearchStrategy<T> {
 		if (firstNode.getValue().equals(search.getValue())) {
 			this.path.add(firstNode);
 			found.add(firstNode);
-			firstNode.setVisited(true);
 		} else {
 			this.path.add(firstNode);
-			firstNode.setVisited(true);
 			for (Node<T> it : firstNode.getChildren()) {
-				if (!it.isVisited()) {
+				if (!this.path.contains(it)) {
 					besucheRek(it, search);
 				}
 			}
 		}
-		clean();
 		return found;
 	}
 
@@ -49,13 +46,12 @@ public class Tiefensuche<T> implements SearchStrategy<T> {
 	 *            der zu durchsuchende Knoten
 	 */
 	private void besucheRek(Node<T> node, Node<T> search) {
-		node.setVisited(true);
 		this.path.add(node);
 		for (Node<T> it : node.getChildren()) {
 			if (it.getValue().equals(search.getValue())) {
 				this.found.add(it);
 			}
-			if (!it.isVisited()) {
+			if (!this.path.contains(it)) {
 				besucheRek(it, search);
 			}
 		}
@@ -67,16 +63,5 @@ public class Tiefensuche<T> implements SearchStrategy<T> {
 	@Override
 	public NodeListImpl<T> getPath() {
 		return this.path;
-	}
-	
-	/**
-	 * Diese Methode sorgt dafuer dass alle zuvor gefundenen Knoten als nicht
-	 * gefunden (false) markiert werden. Diese Methode wird nur innerhalb der
-	 * Breitensuche verwendet und ist deshalb private.
-	 */
-	private void clean() {
-		for (Node<T> it : this.path) {
-			it.setVisited(false);
-		}
 	}
 }

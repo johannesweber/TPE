@@ -17,7 +17,6 @@ public class Node<T> {
 	private String name;
 	private T value;
 	private NodeListImpl<T> children;
-	private boolean visited;
 
 	/**
 	 * Konstruktor fuer einen Knoten. In diesem wird sofort beim anlegen des
@@ -63,20 +62,6 @@ public class Node<T> {
 	 */
 	public T getValue() {
 		return this.value;
-	}
-
-	/**
-	 * @param true = Knoten wurde besucht, false = Knoten wurde nicht besucht
-	 */
-	public void setVisited(Boolean set) {
-		this.visited = set;
-	}
-
-	/**
-	 * @return gibt zurueck ob der Knoten schon besucht wurde oder nicht
-	 */
-	public boolean isVisited() {
-		return this.visited;
 	}
 
 	/**
