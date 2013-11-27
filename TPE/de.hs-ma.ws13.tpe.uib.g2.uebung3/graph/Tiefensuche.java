@@ -10,6 +10,7 @@ import interfaces.SearchStrategy;
  * 
  * @author Johannes Weber
  * @author Amanpreet Singh Chahota
+ * @author Yannick Appolain Fowa
  * 
  * @param <T>
  *            Ein beliebiger Datentyp
@@ -31,7 +32,7 @@ public class Tiefensuche<T> implements SearchStrategy<T> {
 			this.path.add(firstNode);
 			for (Node<T> it : firstNode.getChildren()) {
 				if (!this.path.contains(it)) {
-					besucheRek(it, search);
+					searchRek(it, search);
 				}
 			}
 		}
@@ -44,15 +45,17 @@ public class Tiefensuche<T> implements SearchStrategy<T> {
 	 * 
 	 * @param node
 	 *            der zu durchsuchende Knoten
+	 * @param search
+	 *            der gesuchte Knoten
 	 */
-	private void besucheRek(Node<T> node, Node<T> search) {
+	private void searchRek(Node<T> node, Node<T> search) {
 		this.path.add(node);
 		for (Node<T> it : node.getChildren()) {
 			if (it.getValue().equals(search.getValue())) {
 				this.found.add(it);
 			}
 			if (!this.path.contains(it)) {
-				besucheRek(it, search);
+				searchRek(it, search);
 			}
 		}
 	}

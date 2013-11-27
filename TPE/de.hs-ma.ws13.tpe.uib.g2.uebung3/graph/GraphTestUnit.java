@@ -7,6 +7,7 @@ import org.junit.Test;
 /**
  * @author Johannes Weber
  * @author Amanpreet Singh Chahota
+ * @author Yannick Appolain Fowa
  */
 public class GraphTestUnit {
 

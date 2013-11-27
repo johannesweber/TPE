@@ -8,6 +8,7 @@ package graph;
  * 
  * @author Johannes Weber
  * @author Amanpreet Singh Chahota
+ * @author Yannick Appolain Fowa
  * 
  * @param <T>
  *            Ein beliebiger Datentyp

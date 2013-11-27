@@ -8,6 +8,7 @@ import java.util.LinkedList;
  * 
  * @author Johannes Weber
  * @author Amanpreet Singh Chahota
+ * @author Yannick Appolain Fowa
  * 
  * @param <T>
  *            in beliebiger Datentyp

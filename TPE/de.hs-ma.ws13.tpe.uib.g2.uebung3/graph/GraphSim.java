@@ -3,6 +3,7 @@ package graph;
 /**
  * @author Johannes Weber
  * @author Amanpreet Singh Chahota
+ * @author Yannick Appolain Fowa
  */
 public class GraphSim {
 
