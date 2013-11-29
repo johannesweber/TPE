@@ -10,12 +10,12 @@ public class Kartendeck {
 	
 	public Kartendeck(){
 		this.deck = new ArrayDeque<Karte>();
-		int zaehler = 0;
-	      for (Kartenfarbe farbe : Kartenfarbe.values()) {
-	         for (Kartenwert wert : Kartenwert.values()) {
-	        	 
-	         }
-	      }
+	      for (Kartenfarbe farbe : Kartenfarbe.values())  {
+              for (Kartenwert wert : Kartenwert.values()) {
+                  deck.add(new Karte(farbe, wert));
+
+              }
+          }
 	}
 
 	public Queue<Karte> getDeck() {
