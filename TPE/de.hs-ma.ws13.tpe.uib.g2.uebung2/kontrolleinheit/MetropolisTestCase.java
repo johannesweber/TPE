@@ -1,11 +1,16 @@
 package kontrolleinheit;
 
-import static org.junit.Assert.*;
-import metropolis.*;
-import menschen.*;
-import mutanten.*;
-import unternehmen.*;
+import menschen.Buerger;
+import menschen.Richter;
+import metropolis.Finanzamt;
+import metropolis.Syndikat;
+import mutanten.Schurke;
+import mutanten.Superheld;
 import org.junit.Test;
+import unternehmen.Kapitalgesellschaft;
+import unternehmen.Personengesellschaft;
+
+import static org.junit.Assert.*;
 
 /**
  * @author Johannes Weber

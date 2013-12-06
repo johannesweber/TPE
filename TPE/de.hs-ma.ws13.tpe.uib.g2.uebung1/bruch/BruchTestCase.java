@@ -3,13 +3,14 @@ package bruch;
 import static org.junit.Assert.*;
 
 /**
- * Zusätzlich zu den vorgegebenen Testfällen, testeten wir folgenden Rechenoperation:
- * Rechnen mit negativen Brüchen
- * Rechnen mit 2 echten Brüchen
+ * Zusï¿½tzlich zu den vorgegebenen Testfï¿½llen, testeten wir folgenden Rechenoperation:
+ * Rechnen mit negativen Brï¿½chen
+ * Rechnen mit 2 echten Brï¿½chen
  * Potenzieren mit einem Bruch
  * Zusatzlich wird die 'equals','kehrwert' und 'isEcht' Methode getestet
  * 
  */
+
 
 import org.junit.Test;
 
@@ -60,7 +61,7 @@ public class BruchTestCase {
 	}
 
 	/**
-	 * Diese Methode testet, ob Brüche richtig miteinander addiert werden.
+	 * Diese Methode testet, ob Brï¿½che richtig miteinander addiert werden.
 	 */
 
 	@Test
@@ -91,7 +92,7 @@ public class BruchTestCase {
 	}
 
 	/**
-	 * Diese Methode testet, ob Brüche richtig voneinander subtrahiert werden.
+	 * Diese Methode testet, ob Brï¿½che richtig voneinander subtrahiert werden.
 	 */
 	@Test
 	public void testSubtrahieren() {
@@ -121,7 +122,7 @@ public class BruchTestCase {
 	}
 
 	/**
-	 * Diese Methode testet, ob Brüche richtig miteinander multipliziert werden.
+	 * Diese Methode testet, ob Brï¿½che richtig miteinander multipliziert werden.
 	 */
 	@Test
 	public void testMultiplikation() {
@@ -146,7 +147,7 @@ public class BruchTestCase {
 	}
 
 	/**
-	 * Diese Methode testet, ob Brüche richtig dividiert werden.
+	 * Diese Methode testet, ob Brï¿½che richtig dividiert werden.
 	 */
 
 	@Test
@@ -168,7 +169,7 @@ public class BruchTestCase {
 	}
 
 	/**
-	 * Diese Methode testet, ob Brüche richtig potenziert werden.
+	 * Diese Methode testet, ob Brï¿½che richtig potenziert werden.
 	 */
 
 	@Test
@@ -187,7 +188,7 @@ public class BruchTestCase {
 	}
 
 	/**
-	 * Diese Methode testet, ob die Inhalte zweier Brüche identisch sind.
+	 * Diese Methode testet, ob die Inhalte zweier Brï¿½che identisch sind.
 	 */
 
 	@Test
