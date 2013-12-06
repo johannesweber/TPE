@@ -1,7 +1,9 @@
 package casino;
 
-public interface KartenMischer {
+public abstract class KartenMischer {
 
 	
-	public abstract void mischen();
+	public void mischen(){
+
+    }
 }

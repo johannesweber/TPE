@@ -27,6 +27,27 @@ public class Tisch {
     public Map<String, Spieler> getSpieler(){
         return this.spieler;
     }
+        class dealer extends KartenMischer{
 
+            public void austeilen(){
 
+            }
+
+            public int getEinsatz(Spieler spieler){
+                return 0;
+            }
+
+            public Spieler gewinnerIst(){
+                return null;
+            }
+
+            public void gewinnAuszahlen(){
+
+            }
+
+            public void kartenEinsammeln(){
+
+            }
+
+        }
 }
