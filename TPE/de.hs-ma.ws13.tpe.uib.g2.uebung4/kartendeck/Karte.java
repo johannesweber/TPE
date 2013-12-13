@@ -11,10 +11,10 @@ public class Karte {
 	}
 
 	public Kartenfarbe getFarbe() {
-		return farbe;
+		return this.farbe;
 	}
 
-	public Kartenwert getWert() {
-		return wert;
+	public int getWert() {
+		return this.wert.getWert();
 	}
 }

@@ -1,9 +1,12 @@
 package casino;
 
-public abstract class KartenMischer {
+import tisch.Kartendeck;
+import java.util.Collections;
+
+public class KartenMischer {
 
 	
-	public void mischen(){
-
+	public static void mischen(Kartendeck deck){
+        Collections.shuffle(deck.getDeck());
     }
 }

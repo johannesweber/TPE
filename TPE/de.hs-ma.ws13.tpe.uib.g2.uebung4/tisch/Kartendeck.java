@@ -1,24 +1,22 @@
 package tisch;
 
-import java.util.ArrayDeque;
-import java.util.Queue;
 import kartendeck.*;
+import java.util.Stack;
 
 public class Kartendeck {
 	
-	private Queue<Karte> deck;
+	private Stack<Karte> deck;
 	
 	public Kartendeck(){
-		this.deck = new ArrayDeque<Karte>();
+		this.deck = new Stack<Karte>();
 	      for (Kartenfarbe farbe : Kartenfarbe.values())  {
               for (Kartenwert wert : Kartenwert.values()) {
                   deck.add(new Karte(farbe, wert));
-
               }
           }
-	}
+    }
 
-	public Queue<Karte> getDeck() {
+	public Stack<Karte> getDeck() {
 		return deck;
 	}
 }
