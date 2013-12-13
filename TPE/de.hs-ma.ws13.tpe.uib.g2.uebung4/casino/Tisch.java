@@ -2,9 +2,8 @@ package casino;
 
 import kartendeck.Karte;
 import tisch.*;
-import java.util.HashMap;
-import java.util.LinkedList;
-import java.util.Map;
+
+import java.util.*;
 
 public class Tisch {
 
@@ -27,7 +26,7 @@ public class Tisch {
     public Map<String, Spieler> getSpieler(){
         return this.teilnehmer;
     }
-        class dealer {  //Singleton nachgucken
+        class dealer {  //Singleton nachgucken auch zu den Teilnehmern hinzufuegen
 
             private String name;
             private int vermoegen = 0;
@@ -46,8 +45,8 @@ public class Tisch {
             public void austeilen(){
                 int kartenAnzahl = 0;
                 while (kartenAnzahl != 3){
-                    for (Spieler i : Tisch.this.teilnehmer.values()){
-                        i.setHand(Tisch.this.kartendeck.getDeck().pop());
+                    for (Spieler it : Tisch.this.teilnehmer.values()){
+                        it.setHand(Tisch.this.kartendeck.getDeck().pop());
                         kartenAnzahl++;
                     }
                 }
@@ -60,19 +59,21 @@ public class Tisch {
 
             public Spieler gewinnerIst(){
                 LinkedList<Spieler> moeglicheGewinner = new LinkedList<Spieler>();
-                for (Spieler i : Tisch.this.teilnehmer.values()){
-                    if(i.getPunktzahl() <= 21){
-                        moeglicheGewinner.addFirst(i);
+                LinkedList<Spieler> gewinnerListe = new LinkedList<Spieler>();
+                Spieler gewinner = null;
+                for (Spieler it : Tisch.this.teilnehmer.values()){
+                    if(it.getPunktzahl() <= 21){
+                        moeglicheGewinner.add(it);
                     }
                 }
-                if(!moeglicheGewinner.isEmpty()){
-                    for(Spieler it : moeglicheGewinner){
-
-                        }
-
+                Spieler tmpGewinner = moeglicheGewinner.getFirst();
+                for (Spieler it : moeglicheGewinner){
+                    if(it.getPunktzahl() > tmpGewinner.getPunktzahl() || it.getPunktzahl() == tmpGewinner.getPunktzahl()){
+                        gewinnerListe.add(it);
+                        tmpGewinner = it;
                     }
                 }
-                return moeglicheGewinner.getFirst();
+                return null;
             }
 
             public void gewinnAuszahlen(){
