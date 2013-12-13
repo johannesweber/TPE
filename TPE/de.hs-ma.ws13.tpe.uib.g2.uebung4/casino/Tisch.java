@@ -66,10 +66,7 @@ public class Tisch {
                     }
                 }
                 if(!moeglicheGewinner.isEmpty()){
-                    LinkedList<Spieler> gewinner = new LinkedList<Spieler>();
-                    gewinner.addFirst(moeglicheGewinner.getFirst());
                     for(Spieler it : moeglicheGewinner){
-                        if(it.getPunktzahl() > gewinner.peekFirst().getPunktzahl()){
 
                         }
 
