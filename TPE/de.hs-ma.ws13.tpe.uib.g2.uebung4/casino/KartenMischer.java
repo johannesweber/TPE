@@ -1,12 +1,21 @@
 package casino;
 
 import tisch.Kartendeck;
+
 import java.util.Collections;
 
+/**
+ * der zentrale kartenmischer. Er kuemmert sich nur um das Mischen der einzelnen kartendecks.
+ */
 public class KartenMischer {
 
-	
-	public static void mischen(Kartendeck deck){
+    /**
+     * Methode welche ein kartendeck mischt.
+     * Das Kartendeck wird mit Hilfe der Methode shuffle() von den Collections gemischt.
+     *
+     * @param deck das Kartendeck welches gemischt werden soll.
+     */
+    public static void mischen(Kartendeck deck) {
         Collections.shuffle(deck.getDeck());
     }
 }

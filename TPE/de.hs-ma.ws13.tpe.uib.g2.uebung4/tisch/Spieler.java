@@ -1,62 +1,94 @@
 package tisch;
 
 import kartendeck.Karte;
+
 import java.util.LinkedList;
 
+/**
+ * Eine Klasse fuer einen Spieler an einem Tisch. Jeder Spieler hat einen Namen und eine eindeutige ID. Zusaetzlich
+ * besitzt jeder Spieler ein vermoegen und eine "Hand" in der alle seine Karten, welche er an einem Tisch bekommt,
+ * gespeichert sind.
+ */
 public class Spieler {
 
-	private String name;
-	private String id;
+    private String name;
+    private String id;
     private int idInt = 0;
     private Integer idIntW = new Integer(idInt);
-	private int vermoegen = 0;
+    private int vermoegen = 0;
     private LinkedList<Karte> hand;
 
-    public Spieler(String name, int vermoegen){
+    public Spieler(String name, int vermoegen) {
         this.name = name;
         this.vermoegen = vermoegen;
         this.idInt++;
         this.id = idIntW.toString();
         this.hand = new LinkedList<Karte>();
     }
-	/**
-	 * Methode, mit welcher der Spieler ein Betrag setzen kann. Das Vermoegen wird verringert.
-	 * 
-	 * @param betrag
-	 *            der zu setzende Betrag
-	 */
-	public void setzen(int betrag) {
+
+    /**
+     * Methode, mit welcher der Spieler ein Betrag setzen kann. Das Vermoegen wird verringert.
+     *
+     * @param betrag der zu setzende Betrag
+     */
+    public void setzen(int betrag) {
         this.vermoegen -= betrag;
-	}
+    }
 
     /**
      * Methode die eingesetzt wird wenn der Spieler gewinnt.Das Vermoegen wird erhoeht.
      *
-     * @param betrag   Der Betrag um welchen das Vermoegen erhoeht wird.
+     * @param betrag Der Betrag um welchen das Vermoegen erhoeht wird.
      */
-    public void gewonnen(int betrag){
+    public void gewonnen(int betrag) {
         this.vermoegen += betrag;
     }
 
-    public String getName(){
+    /**
+     * @return der Name des Spielers
+     */
+    public String getName() {
         return this.name;
     }
 
-    public String getId(){
+    /**
+     * @return die ID des Spielers
+     */
+    public String getId() {
         return this.id;
     }
 
-    public int getVermoegen(){
+    /**
+     * @return das Vermoegen des Spielers
+     */
+    public int getVermoegen() {
         return this.vermoegen;
     }
 
-    public void setHand(Karte karte){
+    /**
+     * Methode welche dem Spieler eine Karte austeilt.
+     *
+     * @param karte die auszuteilende Karte
+     */
+    public void karteAusteilen(Karte karte) {
         this.hand.add(karte);
     }
 
-    public int getPunktzahl(){
+    /**
+     * Methode, welche alle Karten des Spielers einsammelt.
+     */
+    public void karteEinsammeln() {
+        this.hand.clear();
+    }
+
+    /**
+     * Mit dieser methode wird die Punktzahl des Spielers berechnet.
+     *
+     * @return die Punktzahl
+     */
+    public int berechnePunkte() {
         int punktzahl = 0;
-        for(Karte i : this.hand){
+        for (Karte i : this.hand) {
             punktzahl += i.getWert();
         }
         return punktzahl;
