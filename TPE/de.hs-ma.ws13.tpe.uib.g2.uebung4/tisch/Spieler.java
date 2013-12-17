@@ -1,6 +1,7 @@
 package tisch;
 
-import casino.Casino;
+import casino.*;
+
 import kartendeck.Karte;
 
 import java.util.LinkedList;
@@ -14,17 +15,13 @@ public class Spieler {
 
     protected String name;
     protected String id;
-    protected int idInt = 0;
-    protected Integer idIntW;
-    protected int vermoegen = 0;
+    protected int vermoegen;
     protected LinkedList<Karte> hand;
 
     public Spieler(String name, int vermoegen) {
+        this.id = "" + System.identityHashCode(this);
         this.name = name;
         this.vermoegen = vermoegen;
-        this.idInt++;
-        this.idIntW = new Integer(idInt);
-        this.id = idIntW.toString();
         this.hand = new LinkedList<Karte>();
     }
 
@@ -33,9 +30,16 @@ public class Spieler {
      *
      * @param betrag der zu setzende Betrag
      */
-    public void setzen(Pot pot, int betrag) {
-        pot.put(this.id, betrag);
+    public void setzen(Tisch tisch, int betrag) {
+        tisch.getPot().put(this.getId(), betrag);
         this.vermoegen -= betrag;
+    }
+
+    /**
+     * @return liefert die Hand des Spielers zurueck.
+     */
+    public LinkedList<Karte> getHand() {
+        return this.hand;
     }
 
     /**
@@ -69,22 +73,6 @@ public class Spieler {
     }
 
     /**
-     * Methode welche dem Spieler eine Karte austeilt.
-     *
-     * @param karte die auszuteilende Karte
-     */
-    public void karteAusteilen(Karte karte) {
-        this.hand.add(karte);
-    }
-
-    /**
-     * Methode, welche alle Karten des Spielers einsammelt.
-     */
-    public void karteEinsammeln() {
-        this.hand.clear();
-    }
-
-    /**
      * Mit dieser methode wird die Punktzahl des Spielers berechnet.
      *
      * @return die Punktzahl
@@ -97,7 +85,22 @@ public class Spieler {
         return punktzahl;
     }
 
-    public void betreten(Casino casino){
+    /**
+     * Methode um ein bestimmtes Casino zu besuchen.
+     *
+     * @param casino Das Casino, welches besucht werden soll.
+     */
+    public void betreten(Casino casino) {
         casino.besucherZuordnen(this);
+    }
+
+    @Override
+    public String toString() {
+        return "Spieler{" +
+                ", name='" + name + '\'' +
+                ", id='" + id + '\'' +
+                ", vermoegen=" + vermoegen +
+                ", hand=" + hand +
+                '}';
     }
 }

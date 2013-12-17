@@ -6,29 +6,29 @@ import java.util.*;
 
 public class Tisch {
 
-    private int tischNr = 0;
     private Map<String, Spieler> teilnehmer;
     private Kartendeck kartendeck;
     private Pot pot;
+    private Dealer dealer;
 
     /**
      * Konstruktor fuer einen Tisch. Jeder Tisch bekommt eine TischNr, ein Kartendeck und ein Pot.
      * Zusaetzlich sitzen an jedem Tisch Teilnehmer.
      */
     public Tisch() {
-        this.tischNr++;
         this.teilnehmer = new HashMap<String, Spieler>();
         this.kartendeck = new Kartendeck();
         this.pot = new Pot();
+        this.dealer = new Dealer("Der Dealer");
     }
 
     /**
-     * Eine Methode welche die TischNr zurueckliefert.
+     * Gestattet den Zugriff von außen auf den Dealer.
      *
-     * @return die Tischnummer.
+     * @return der Dealer des Tisches.
      */
-    public int getTischNr() {
-        return this.tischNr;
+    public Dealer getDealer() {
+        return this.dealer;
     }
 
     /**
@@ -38,21 +38,19 @@ public class Tisch {
         return this.teilnehmer;
     }
 
-    public int AnzahlTeilnehmer(){
+    public int AnzahlTeilnehmer() {
         return teilnehmer.size();
     }
 
     /**
-     * @return liefert die Gewinnerliste zurueck
+     * @return liefert den Pot des Tischen zurueck.
      */
-    public LinkedList<Spieler> getGewinner() {
-        Dealer dealer = new Dealer("Heinz");
-        return dealer.gewinnerIst();
+    public Pot getPot() {
+        return pot;
     }
 
     /**
-     *
-     * @return  gibt den insgesamt gesetzten Betrag zurueck
+     * @return gibt den insgesamt gesetzten Betrag zurueck
      */
     public int getHoehePot() {
         int hoehePot = 0;
@@ -65,10 +63,10 @@ public class Tisch {
     /**
      * Methode um einen Spieler einem Tisch zuzuordnen.
      *
-     * @param spieler  der Spieler der zugeordnet wird.
+     * @param spieler der Spieler der zugeordnet wird.
      */
-    public void hinsetzen(Spieler spieler){
-        teilnehmer.put(spieler.getId(), spieler);
+    public void hinsetzen(Spieler spieler) {
+        this.teilnehmer.put(spieler.getId(), spieler);
     }
 
     /**
@@ -78,17 +76,7 @@ public class Tisch {
     class Dealer extends Spieler {
 
         public Dealer(String name) {
-            super(name, 100000);
-            this.idInt += idInt++;
-        }
-
-        /**
-         * Methode die eingesetzt wird wenn der Dealer gewinnt.Der Gewinn eines Casinos wird erhoeht.
-         *
-         * @param betrag Der Betrag um welchen der Gewinn erhoeht wird.
-         */
-        public void gewonnen(Casino casino, int betrag) {
-            casino.gewonnen(betrag);
+            super(name, 10000000);
         }
 
         /**
@@ -101,14 +89,17 @@ public class Tisch {
         /**
          * Mit dieser Methode teilt der Dealer sich selber und allen Teilnehmern drei karten aus.
          */
-        public void austeilen() {
+        public void kartenAusteilen() {
+            if (Tisch.this.getHoehePot() == 0) {
+                System.out.println("Bitte zuerst die Einsaetze taetigen!");
+            }
             int kartenAnzahl = 0;
-            while (kartenAnzahl != 3) {
+            while (kartenAnzahl < 3) {
                 for (Spieler it : Tisch.this.teilnehmer.values()) {
-                    it.karteAusteilen(Tisch.this.kartendeck.getDeck().pop());
-                    this.hand.add(Tisch.this.kartendeck.getDeck().pop());
-                    kartenAnzahl++;
+                    it.getHand().add(Tisch.this.kartendeck.getDeck().pop());
                 }
+                this.hand.add(Tisch.this.kartendeck.getDeck().pop());
+                kartenAnzahl++;
             }
         }
 
@@ -119,8 +110,7 @@ public class Tisch {
          * @return Der Einsatz des Spielers
          */
         public int getEinsatz(Spieler spieler) {
-            String id = spieler.getId();
-            return Tisch.this.pot.get(id);
+            return Tisch.this.pot.get(spieler.getId());
         }
 
         /**
@@ -129,23 +119,30 @@ public class Tisch {
          * @return der Gewinner der Runde
          */
         public LinkedList<Spieler> gewinnerIst() {
-            LinkedList<Spieler> gewinner = new LinkedList<Spieler>(Tisch.this.teilnehmer.values());
+            LinkedList<Spieler> unter21 = new LinkedList<Spieler>();
+            LinkedList<Spieler> fastGewinner = new LinkedList<Spieler>();
+            LinkedList<Spieler> gewinner = new LinkedList<Spieler>();
             int max = 0;
-            for (Spieler it : gewinner) {
-                if (it.berechnePunkte() > 21) {
-                    gewinner.remove(it);
+            for (Spieler it : Tisch.this.teilnehmer.values()) {
+                if (it.berechnePunkte() <= 21) {
+                    unter21.add(it);
                 }
-                max = sucheMax(gewinner);
-                for (Spieler it2 : gewinner) {
-                    if (it2.berechnePunkte() < max) {
-                        gewinner.remove(it2);
-                    } else {
-                        if (this.berechnePunkte() <= 21) {
-                            if (this.berechnePunkte() >= it2.berechnePunkte()) {
-                                gewinner.remove(it2);
-                            }
+            }
+            max = sucheMax(unter21);
+            if (max != 0) {
+                for (Spieler it2 : unter21) {
+                    if (it2.berechnePunkte() == max) {
+                        fastGewinner.add(it2);
+                    }
+                }
+                if (this.berechnePunkte() <= max) {
+                    for (Spieler it3 : fastGewinner) {
+                        if (it3.berechnePunkte() > this.berechnePunkte()) {
+                            gewinner.add(it3);
                         }
                     }
+                } else {
+                    gewinner.addAll(fastGewinner);
                 }
             }
             return gewinner;
@@ -155,16 +152,20 @@ public class Tisch {
          * Methode um das Maximum der Punkte in einer Liste zu suchen
          *
          * @param liste Die Liste, in der gesucht werden soll.
-         * @return  Das Maximum der Punktzahl in der Liste
+         * @return Das Maximum der Punktzahl in der Liste
          */
         private int sucheMax(LinkedList<Spieler> liste) {
+            Spieler tmpSpieler;
             int max = 0;
             ListIterator<Spieler> it = liste.listIterator();
-            max = it.next().berechnePunkte();
-            while (!liste.isEmpty()) {
-                it.next();
-                if (it.next().berechnePunkte() > max) {
-                    max = it.next().berechnePunkte();
+            if (!liste.isEmpty()) {
+                tmpSpieler = it.next();
+                max = tmpSpieler.berechnePunkte();
+                while (it.hasNext()) {
+                    tmpSpieler = it.next();
+                    if (tmpSpieler.berechnePunkte() > max) {
+                        max = tmpSpieler.berechnePunkte();
+                    }
                 }
             }
             return max;
@@ -172,22 +173,19 @@ public class Tisch {
 
         /**
          * Methode welcher den Pot an den Gewinner/ die Gewinner auszahlt.
-         *
-         * @param casino Das Casino in welchem gespielt wurde
-         * @param tisch  Der Tisch an welchem gespielt wurde
          */
-        public void gewinnAuszahlen(Casino casino, Tisch tisch) {
+        public void gewinnAuszahlen() {
+            LinkedList<Spieler> gewinner = this.gewinnerIst();
             int betrag = Tisch.this.getHoehePot();
-            LinkedList<Spieler> gewinner = new LinkedList<Spieler>();
-            gewinner = tisch.getGewinner();
             if (gewinner.isEmpty()) {
-                this.gewonnen(casino, betrag);
+                Casino.gewonnen(betrag);
             }
             if (gewinner.size() == 1) {
                 for (Spieler it : gewinner) {
                     it.gewonnen(betrag);
                 }
-            } else {
+            }
+            if (gewinner.size() > 1) {
                 for (Spieler it : gewinner) {
                     it.gewonnen((betrag / gewinner.size()));
                 }
@@ -199,9 +197,9 @@ public class Tisch {
          */
         public void kartenEinsammeln() {
             for (Spieler it : Tisch.this.teilnehmer.values()) {
-                it.karteEinsammeln();
-                this.hand.clear();
+                it.getHand().clear();
             }
+            this.hand.clear();
             Tisch.this.teilnehmer.clear();
         }
     }

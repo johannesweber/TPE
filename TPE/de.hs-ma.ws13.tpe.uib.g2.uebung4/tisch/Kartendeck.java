@@ -27,4 +27,11 @@ public class Kartendeck {
     public Stack<Karte> getDeck() {
         return deck;
     }
+
+    @Override
+    public String toString() {
+        return "Kartendeck{" +
+                "deck=" + deck +
+                '}';
+    }
 }

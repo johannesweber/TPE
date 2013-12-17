@@ -26,4 +26,12 @@ public class Karte {
     public int getWert() {
         return this.wert.getWert();
     }
+
+    @Override
+    public String toString() {
+        return "Karte{" +
+                "farbe=" + farbe +
+                ", wert=" + wert +
+                '}';
+    }
 }

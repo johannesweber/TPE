@@ -6,18 +6,17 @@ import java.util.LinkedList;
 
 /**
  * Die Klasse fuer ein Casino. Ein Casino hat einen Namen, einen Gewinn und besteht aus beliebig vielen Tischen.
- * Sobald ein Casin erstellt wird, wird auch der erste tisch dem Casino hinzugefuegt.
  */
 public class Casino {
 
     private String name;
-    private int gewinn;
+    private static int gewinn;
     private LinkedList<Tisch> tische;
 
     public Casino(String name) {
         this.name = name;
         this.tische = new LinkedList<Tisch>();
-        this.tische.add(new Tisch());
+        tische.add(new Tisch());
     }
 
     /**
@@ -32,8 +31,8 @@ public class Casino {
      *
      * @param gewinn der Gewinn (falls der Dealer gewonnen hat)
      */
-    public void gewonnen(int gewinn) {
-        this.gewinn += gewinn;
+    public static void gewonnen(int gewinn) {
+        Casino.gewinn += gewinn;
     }
 
     /**
@@ -41,6 +40,17 @@ public class Casino {
      */
     public int getAnzahlTische() {
         return this.tische.size();
+    }
+
+    /**
+     * @return liefert alle Tische des Casinos zurueck.
+     */
+    public LinkedList<Tisch> getTische() {
+        return this.tische;
+    }
+
+    public void tischAufstellen(Tisch tisch) {
+        this.tische.add(tisch);
     }
 
     /**
@@ -58,7 +68,7 @@ public class Casino {
                 }
             }
             if (!hinsetzen) {
-                tische.add(new Tisch());
+                tischAufstellen(new Tisch());
             }
         }
     }
