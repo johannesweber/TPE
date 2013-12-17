@@ -1,16 +1,15 @@
 package casino;
 
-import kartendeck.Karte;
 import tisch.*;
 
 import java.util.*;
 
 public class Tisch {
 
-    private Map<String, Integer> pot;
     private int tischNr = 0;
     private Map<String, Spieler> teilnehmer;
     private Kartendeck kartendeck;
+    private Pot pot;
 
     /**
      * Konstruktor fuer einen Tisch. Jeder Tisch bekommt eine TischNr, ein Kartendeck und ein Pot.
@@ -20,7 +19,7 @@ public class Tisch {
         this.tischNr++;
         this.teilnehmer = new HashMap<String, Spieler>();
         this.kartendeck = new Kartendeck();
-        this.pot = new HashMap<String, Integer>();
+        this.pot = new Pot();
     }
 
     /**
@@ -40,19 +39,43 @@ public class Tisch {
     }
 
     /**
-     * Innere Klasse fuer einen Dealer. Genauso wie ein Spieler besitzt der Dealer ein Namen, ein vermoegen,
-     * welches er Setzen kann und eine Hand.
+     * @return liefert die Gewinnerliste zurueck
      */
-    class dealer {  //Singleton nachgucken
+    public LinkedList<Spieler> getGewinner() {
+        Dealer dealer = new Dealer("Heinz");
+        return dealer.gewinnerIst();
+    }
 
-        private String name;
-        private int vermoegen = 0;
-        private LinkedList<Karte> hand;
+    /**
+     *
+     * @return  gibt den insgesamt gesetzten Betrag zurueck
+     */
+    public int getHoehePot() {
+        int hoehePot = 0;
+        for (int it : this.pot.values()) {
+            hoehePot += it;
+        }
+        return hoehePot;
+    }
 
-        public dealer(String name, int vermoegen) {
-            this.name = name;
-            this.vermoegen = vermoegen;
-            this.hand = new LinkedList<Karte>();
+    /**
+     * Innere Klasse fuer einen Dealer. Genauso wie ein Spieler besitzt der Dealer ein Namen, ein Vermoegen,
+     * welches er Setzen kann, und eine Hand. Deswegen erbt der Dealer von Spieler
+     */
+    class Dealer extends Spieler {
+
+        public Dealer(String name) {
+            super(name, 100000);
+            this.idInt += idInt++;
+        }
+
+        /**
+         * Methode die eingesetzt wird wenn der Dealer gewinnt.Der Gewinn eines Casinos wird erhoeht.
+         *
+         * @param betrag Der Betrag um welchen der Gewinn erhoeht wird.
+         */
+        public void gewonnen(Casino casino, int betrag) {
+            casino.gewonnen(betrag);
         }
 
         /**
@@ -77,26 +100,6 @@ public class Tisch {
         }
 
         /**
-         * @return die Punktzahl des Dealers
-         */
-        public int berechnePunkte() {
-            int punktzahl = 0;
-            for (Karte i : this.hand) {
-                punktzahl += i.getWert();
-            }
-            return punktzahl;
-        }
-
-        /**
-         * Methode die eingesetzt wird wenn der Dealer gewinnt.Der Gewinn geht an das Casino.
-         *
-         * @param betrag Der Betrag um welchen das Vermoegen des Casinos erhoeht wird.
-         */
-        public void gewonnen(Casino casino, int betrag) {
-            casino.gewonnen(betrag);
-        }
-
-        /**
          * Methode welche der Einsatz eines beliebigen Spielers ausgibt.
          *
          * @param spieler Der Spieler, dessen Einsatz ausgegeben werden soll.
@@ -113,32 +116,52 @@ public class Tisch {
          * @return der Gewinner der Runde
          */
         public LinkedList<Spieler> gewinnerIst() {
-            LinkedList<Spieler> moeglicheGewinner = new LinkedList<Spieler>();
-            LinkedList<Spieler> gewinnerListe = new LinkedList<Spieler>();
-            Spieler gewinner = null;
-            for (Spieler it : Tisch.this.teilnehmer.values()) {
-                if (it.berechnePunkte() <= 21) {
-                    moeglicheGewinner.add(it);
+            LinkedList<Spieler> gewinner = new LinkedList<Spieler>(Tisch.this.teilnehmer.values());
+            int max = 0;
+            for (Spieler it : gewinner) {
+                if (it.berechnePunkte() > 21) {
+                    gewinner.remove(it);
+                }
+                max = sucheMax(gewinner);
+                for (Spieler it2 : gewinner) {
+                    if (it2.berechnePunkte() < max) {
+                        gewinner.remove(it2);
+                    } else {
+                        if (this.berechnePunkte() <= 21) {
+                            if (this.berechnePunkte() >= it2.berechnePunkte()) {
+                                gewinner.remove(it2);
+                            }
+                        }
+                    }
+                }
+
+            }
+            return gewinner;
+        }
+
+        private int sucheMax(LinkedList<Spieler> liste) {
+            int max = 0;
+            ListIterator<Spieler> it = liste.listIterator();
+            max = it.next().berechnePunkte();
+            while (!liste.isEmpty()) {
+                it.next();
+                if (it.next().berechnePunkte() > max) {
+                    max = it.next().berechnePunkte();
                 }
             }
-            Spieler tmpGewinner = moeglicheGewinner.getFirst();
-            for (Spieler it : moeglicheGewinner) {
-                if (it.berechnePunkte() > tmpGewinner.berechnePunkte() || it.berechnePunkte()
-                        == tmpGewinner.berechnePunkte()) {
-                    gewinnerListe.add(it);
-                    tmpGewinner = it;
-                }
-            }
-            return null;
+            return max;
         }
 
         /**
-         * Methode welche den Gewinn an den Gewinner /die Gewinner auszahlt.
+         * Methode welcher den Pot an den Gewinner/ die Gewinner auszahlt.
          *
-         * @param gewinner Der/Die Gewinner
-         * @param betrag   der Betrag im Pot
+         * @param casino Das Casino in welchem gespielt wurde
+         * @param tisch  Der Tisch an welchem gespielt wurde
          */
-        public void gewinnAuszahlen(Casino casino, LinkedList<Spieler> gewinner, int betrag) {
+        public void gewinnAuszahlen(Casino casino, Tisch tisch) {
+            int betrag = Tisch.this.getHoehePot();
+            LinkedList<Spieler> gewinner = new LinkedList<Spieler>();
+            gewinner = tisch.getGewinner();
             if (gewinner.isEmpty()) {
                 this.gewonnen(casino, betrag);
             }
@@ -161,6 +184,7 @@ public class Tisch {
                 it.karteEinsammeln();
                 this.hand.clear();
             }
+            Tisch.this.teilnehmer.clear();
         }
     }
 }

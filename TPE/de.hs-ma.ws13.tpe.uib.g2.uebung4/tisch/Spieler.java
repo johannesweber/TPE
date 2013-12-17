@@ -11,17 +11,18 @@ import java.util.LinkedList;
  */
 public class Spieler {
 
-    private String name;
-    private String id;
-    private int idInt = 0;
-    private Integer idIntW = new Integer(idInt);
-    private int vermoegen = 0;
-    private LinkedList<Karte> hand;
+    protected String name;
+    protected String id;
+    protected int idInt = 0;
+    protected Integer idIntW;
+    protected int vermoegen = 0;
+    protected LinkedList<Karte> hand;
 
     public Spieler(String name, int vermoegen) {
         this.name = name;
         this.vermoegen = vermoegen;
         this.idInt++;
+        this.idIntW = new Integer(idInt);
         this.id = idIntW.toString();
         this.hand = new LinkedList<Karte>();
     }
@@ -31,7 +32,8 @@ public class Spieler {
      *
      * @param betrag der zu setzende Betrag
      */
-    public void setzen(int betrag) {
+    public void setzen(Pot pot, int betrag) {
+        pot.put(this.id, betrag);
         this.vermoegen -= betrag;
     }
 
