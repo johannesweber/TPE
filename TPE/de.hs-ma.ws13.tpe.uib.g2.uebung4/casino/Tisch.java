@@ -38,6 +38,10 @@ public class Tisch {
         return this.teilnehmer;
     }
 
+    public int AnzahlTeilnehmer(){
+        return teilnehmer.size();
+    }
+
     /**
      * @return liefert die Gewinnerliste zurueck
      */
@@ -56,6 +60,15 @@ public class Tisch {
             hoehePot += it;
         }
         return hoehePot;
+    }
+
+    /**
+     * Methode um einen Spieler einem Tisch zuzuordnen.
+     *
+     * @param spieler  der Spieler der zugeordnet wird.
+     */
+    public void hinsetzen(Spieler spieler){
+        teilnehmer.put(spieler.getId(), spieler);
     }
 
     /**
@@ -134,11 +147,16 @@ public class Tisch {
                         }
                     }
                 }
-
             }
             return gewinner;
         }
 
+        /**
+         * Methode um das Maximum der Punkte in einer Liste zu suchen
+         *
+         * @param liste Die Liste, in der gesucht werden soll.
+         * @return  Das Maximum der Punktzahl in der Liste
+         */
         private int sucheMax(LinkedList<Spieler> liste) {
             int max = 0;
             ListIterator<Spieler> it = liste.listIterator();

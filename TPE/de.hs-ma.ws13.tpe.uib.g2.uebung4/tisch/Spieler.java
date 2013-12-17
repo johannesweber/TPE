@@ -1,5 +1,6 @@
 package tisch;
 
+import casino.Casino;
 import kartendeck.Karte;
 
 import java.util.LinkedList;
@@ -94,5 +95,9 @@ public class Spieler {
             punktzahl += i.getWert();
         }
         return punktzahl;
+    }
+
+    public void betreten(Casino casino){
+        casino.besucherZuordnen(this);
     }
 }

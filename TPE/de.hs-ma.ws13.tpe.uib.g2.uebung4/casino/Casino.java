@@ -1,9 +1,12 @@
 package casino;
 
+import tisch.Spieler;
+
 import java.util.LinkedList;
 
 /**
  * Die Klasse fuer ein Casino. Ein Casino hat einen Namen, einen Gewinn und besteht aus beliebig vielen Tischen.
+ * Sobald ein Casin erstellt wird, wird auch der erste tisch dem Casino hinzugefuegt.
  */
 public class Casino {
 
@@ -40,4 +43,23 @@ public class Casino {
         return this.tische.size();
     }
 
+    /**
+     * Methode um einen Besucher einem freien Tisch zuzuordnen
+     *
+     * @param besucher der Besucher
+     */
+    public void besucherZuordnen(Spieler besucher) {
+        boolean hinsetzen = false;
+        while (!hinsetzen) {
+            for (Tisch it : this.tische) {
+                if (it.AnzahlTeilnehmer() < 8) {
+                    it.hinsetzen(besucher);
+                    hinsetzen = true;
+                }
+            }
+            if (!hinsetzen) {
+                tische.add(new Tisch());
+            }
+        }
+    }
 }
