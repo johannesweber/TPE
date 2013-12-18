@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+  <ID>JAVA</ID>
+  <OriginalElement>casino</OriginalElement>
+  <nodes>
+    <node x="187.214626391097" y="367.78219395866455">casino.Tisch</node>
+    <node x="817.2464228934817" y="174.50397456279802">casino.KartenMischer</node>
+    <node x="620.8235294117646" y="376.8044515103338">casino.Tisch.Dealer</node>
+    <node x="100.8648648648649" y="-96.41494435612083">casino.CasinoTest</node>
+    <node x="777.6470588235295" y="-37.165341812400655">casino.CasinoSim</node>
+    <node x="509.17965023847376" y="78.73290937996816">casino.Casino</node>
+  </nodes>
+  <notes />
+  <edges>
+    <edge source="casino.Tisch" target="casino.Tisch.Dealer">
+      <point x="0.0" y="0.0" />
+      <point x="0.0" y="0.0" />
+    </edge>
+    <edge source="casino.CasinoSim" target="casino.Casino">
+      <point x="0.0" y="0.0" />
+      <point x="0.0" y="0.0" />
+    </edge>
+    <edge source="casino.CasinoTest" target="casino.Casino">
+      <point x="0.0" y="0.0" />
+      <point x="0.0" y="0.0" />
+    </edge>
+    <edge source="casino.Casino" target="casino.Tisch">
+      <point x="0.0" y="0.0" />
+      <point x="0.0" y="0.0" />
+    </edge>
+    <edge source="casino.Tisch.Dealer" target="casino.Tisch">
+      <point x="10.002729123620085" y="0.0" />
+      <point x="10.002729123620057" y="0.0" />
+    </edge>
+    <edge source="casino.CasinoTest" target="casino.Tisch">
+      <point x="0.0" y="0.0" />
+      <point x="0.0" y="0.0" />
+    </edge>
+  </edges>
+  <settings layout="Hierarchic Group" zoom="0.8" x="567.0" y="232.0" />
+  <SelectedNodes>
+    <node>casino.Tisch</node>
+  </SelectedNodes>
+  <Categories>
+    <Category>Methods</Category>
+    <Category>Inner Classes</Category>
+    <Category>Fields</Category>
+    <Category>Properties</Category>
+  </Categories>
+  <SCOPE>All</SCOPE>
+  <VISIBILITY>private</VISIBILITY>
+</Diagram>
+
