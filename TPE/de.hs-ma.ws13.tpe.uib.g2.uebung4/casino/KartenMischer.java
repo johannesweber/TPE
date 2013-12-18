@@ -1,7 +1,6 @@
 package casino;
 
 import tisch.Kartendeck;
-
 import java.util.Collections;
 
 /**
@@ -10,7 +9,7 @@ import java.util.Collections;
 public class KartenMischer {
 
     /**
-     * Methode welche ein kartendeck mischt.
+     * Methode welche ein Uebung4.haupt.kartendeck mischt.
      * Das Kartendeck wird mit Hilfe der Methode shuffle() von den Collections gemischt.
      *
      * @param deck das Kartendeck welches gemischt werden soll.

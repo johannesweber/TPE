@@ -1,7 +1,6 @@
 package tisch;
 
 import kartendeck.*;
-
 import java.util.Stack;
 
 /**

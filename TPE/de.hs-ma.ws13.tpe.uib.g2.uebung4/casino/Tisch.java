@@ -1,7 +1,6 @@
 package casino;
 
 import tisch.*;
-
 import java.util.*;
 
 public class Tisch {
@@ -76,7 +75,7 @@ public class Tisch {
     class Dealer extends Spieler {
 
         public Dealer(String name) {
-            super(name, 10000000);
+            super(100000000);
         }
 
         /**

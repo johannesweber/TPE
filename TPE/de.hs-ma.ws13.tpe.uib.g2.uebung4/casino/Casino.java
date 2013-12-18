@@ -1,7 +1,6 @@
 package casino;
 
 import tisch.Spieler;
-
 import java.util.LinkedList;
 
 /**
@@ -16,7 +15,7 @@ public class Casino {
     public Casino(String name) {
         this.name = name;
         this.tische = new LinkedList<Tisch>();
-        tische.add(new Tisch());
+        this.tische.add(new Tisch());
     }
 
     /**
@@ -64,6 +63,9 @@ public class Casino {
             for (Tisch it : this.tische) {
                 if (it.AnzahlTeilnehmer() < 8) {
                     it.hinsetzen(besucher);
+                    besucher.setTischNr(this.tische.indexOf(it));
+                    besucher.setCasino(this);
+                    it.getDealer().setCasino(this);
                     hinsetzen = true;
                 }
             }
@@ -71,5 +73,12 @@ public class Casino {
                 tischAufstellen(new Tisch());
             }
         }
+    }
+
+    @Override
+    public String toString() {
+        return "Casino{" +
+                "name='" + name + '\'' +
+                '}';
     }
 }

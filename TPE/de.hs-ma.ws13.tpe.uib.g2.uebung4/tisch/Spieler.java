@@ -1,26 +1,26 @@
 package tisch;
 
-import casino.*;
-
+import casino.Casino;
+import casino.Tisch;
 import kartendeck.Karte;
 
 import java.util.LinkedList;
 
 /**
- * Eine Klasse fuer einen Spieler an einem Tisch. Jeder Spieler hat einen Namen und eine eindeutige ID. Zusaetzlich
+ * Eine Klasse fuer einen Spieler an einem Tisch. Jeder Spieler hat eine eindeutige ID (Namensersatz). Zusaetzlich
  * besitzt jeder Spieler ein vermoegen und eine "Hand" in der alle seine Karten, welche er an einem Tisch bekommt,
- * gespeichert sind.
+ * gespeichert sind. Auserdem weiss jeder Spieler an welchem Tisch er sitzt.
  */
 public class Spieler {
 
-    protected String name;
+    protected Casino casino;
+    protected int tischNr;
     protected String id;
     protected int vermoegen;
     protected LinkedList<Karte> hand;
 
-    public Spieler(String name, int vermoegen) {
+    public Spieler(int vermoegen) {
         this.id = "" + System.identityHashCode(this);
-        this.name = name;
         this.vermoegen = vermoegen;
         this.hand = new LinkedList<Karte>();
     }
@@ -30,8 +30,8 @@ public class Spieler {
      *
      * @param betrag der zu setzende Betrag
      */
-    public void setzen(Tisch tisch, int betrag) {
-        tisch.getPot().put(this.getId(), betrag);
+    public void setzen(int betrag) {
+        this.casino.getTische().get(this.tischNr).getPot().put(this.getId(), betrag);
         this.vermoegen -= betrag;
     }
 
@@ -51,11 +51,15 @@ public class Spieler {
         this.vermoegen += betrag;
     }
 
+    public void setCasino(Casino casino) {
+        this.casino = casino;
+    }
+
     /**
-     * @return der Name des Spielers
+     * Methode welche dem Spieler eine TischNr zuweisst.
      */
-    public String getName() {
-        return this.name;
+    public void setTischNr(int tischNr) {
+        this.tischNr = tischNr;
     }
 
     /**
@@ -97,10 +101,10 @@ public class Spieler {
     @Override
     public String toString() {
         return "Spieler{" +
-                ", name='" + name + '\'' +
+                "tischNr=" + tischNr +
                 ", id='" + id + '\'' +
                 ", vermoegen=" + vermoegen +
-                ", hand=" + hand +
+                ", punkte=" + berechnePunkte() +
                 '}';
     }
 }
