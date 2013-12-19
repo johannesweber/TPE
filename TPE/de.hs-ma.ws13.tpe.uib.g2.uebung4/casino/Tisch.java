@@ -1,8 +1,14 @@
 package casino;
 
 import tisch.*;
+
 import java.util.*;
 
+/**
+ * @author Johannes Weber
+ * @author Amanpreet Singh Chahota
+ * @author Yannick Appolain Fowa
+ */
 public class Tisch {
 
     private Map<String, Spieler> teilnehmer;
@@ -11,14 +17,14 @@ public class Tisch {
     private Dealer dealer;
 
     /**
-     * Konstruktor fuer einen Tisch. Jeder Tisch bekommt eine TischNr, ein Kartendeck und ein Pot.
-     * Zusaetzlich sitzen an jedem Tisch Teilnehmer.
+     * Konstruktor fuer einen Tisch. Jeder Tisch bekommt eine TischNr, ein
+     * Kartendeck und ein Pot. Zusaetzlich sitzen an jedem Tisch Teilnehmer.
      */
     public Tisch() {
         this.teilnehmer = new HashMap<String, Spieler>();
         this.kartendeck = new Kartendeck();
         this.pot = new Pot();
-        this.dealer = new Dealer("Der Dealer");
+        this.dealer = new Dealer();
     }
 
     /**
@@ -45,7 +51,7 @@ public class Tisch {
      * @return liefert den Pot des Tischen zurueck.
      */
     public Pot getPot() {
-        return pot;
+        return this.pot;
     }
 
     /**
@@ -59,6 +65,10 @@ public class Tisch {
         return hoehePot;
     }
 
+    public Kartendeck getKartendeck() {
+        return this.kartendeck;
+    }
+
     /**
      * Methode um einen Spieler einem Tisch zuzuordnen.
      *
@@ -69,24 +79,37 @@ public class Tisch {
     }
 
     /**
-     * Innere Klasse fuer einen Dealer. Genauso wie ein Spieler besitzt der Dealer ein Namen, ein Vermoegen,
-     * welches er Setzen kann, und eine Hand. Deswegen erbt der Dealer von Spieler
+     * Innere Klasse fuer einen Dealer. Genauso wie ein Spieler besitzt der
+     * Dealer ein Namen, ein Vermoegen, welches er Setzen kann, und eine Hand.
+     * Deswegen erbt der Dealer von Spieler
      */
     class Dealer extends Spieler {
 
-        public Dealer(String name) {
+        public Dealer() {
             super(100000000);
+        }
+
+        /**
+         * Methode, mit welcher der Dealer ein Betrag setzen kann. Das Vermoegen
+         * wird verringert.
+         *
+         * @param betrag der zu setzende Betrag
+         */
+        public void setzen(int betrag) {
+            Tisch.this.getPot().put(this.id, betrag);
+            this.vermoegen -= betrag;
         }
 
         /**
          * Methode welche das Kartendeck, mit Hilfe des Kartenmischers, mischt
          */
         public void kartenMischen() {
-            KartenMischer.mischen(Tisch.this.kartendeck);
+            casino.getKartenmischer().mischen(Tisch.this.kartendeck);
         }
 
         /**
-         * Mit dieser Methode teilt der Dealer sich selber und allen Teilnehmern drei karten aus.
+         * Mit dieser Methode teilt der Dealer sich selber und allen Teilnehmern
+         * drei karten aus.
          */
         public void kartenAusteilen() {
             if (Tisch.this.getHoehePot() == 0) {
@@ -177,7 +200,7 @@ public class Tisch {
             LinkedList<Spieler> gewinner = this.gewinnerIst();
             int betrag = Tisch.this.getHoehePot();
             if (gewinner.isEmpty()) {
-                Casino.gewonnen(betrag);
+                this.casino.gewonnen(betrag);
             }
             if (gewinner.size() == 1) {
                 for (Spieler it : gewinner) {
@@ -189,6 +212,7 @@ public class Tisch {
                     it.gewonnen((betrag / gewinner.size()));
                 }
             }
+            Tisch.this.pot.clear();
         }
 
         /**
