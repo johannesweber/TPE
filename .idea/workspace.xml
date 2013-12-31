@@ -1,19 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="debac8b4-560b-410e-ad55-50f623c84f47" name="Default" comment="fertig&#10;">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TPE/de.hs-ma.ws13.tpe.uib.g2.uebung4/casino/CasinoTestUnit.java" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/TPE/de.hs-ma.ws13.tpe.uib.g2.uebung4/casino/CasinoTest.java" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/TPE/de.hs-ma.ws13.tpe.uib.g2.uebung4/casino/Casino.java" afterPath="$PROJECT_DIR$/TPE/de.hs-ma.ws13.tpe.uib.g2.uebung4/casino/Casino.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/TPE/de.hs-ma.ws13.tpe.uib.g2.uebung4/casino/CasinoSim.java" afterPath="$PROJECT_DIR$/TPE/de.hs-ma.ws13.tpe.uib.g2.uebung4/casino/CasinoSim.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/TPE/de.hs-ma.ws13.tpe.uib.g2.uebung4/kartendeck/Karte.java" afterPath="$PROJECT_DIR$/TPE/de.hs-ma.ws13.tpe.uib.g2.uebung4/kartendeck/Karte.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/TPE/de.hs-ma.ws13.tpe.uib.g2.uebung4/casino/KartenMischer.java" afterPath="$PROJECT_DIR$/TPE/de.hs-ma.ws13.tpe.uib.g2.uebung4/casino/KartenMischer.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/TPE/de.hs-ma.ws13.tpe.uib.g2.uebung4/tisch/Kartendeck.java" afterPath="$PROJECT_DIR$/TPE/de.hs-ma.ws13.tpe.uib.g2.uebung4/tisch/Kartendeck.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/TPE/de.hs-ma.ws13.tpe.uib.g2.uebung4/kartendeck/Kartenfarbe.java" afterPath="$PROJECT_DIR$/TPE/de.hs-ma.ws13.tpe.uib.g2.uebung4/kartendeck/Kartenfarbe.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/TPE/de.hs-ma.ws13.tpe.uib.g2.uebung4/kartendeck/Kartenwert.java" afterPath="$PROJECT_DIR$/TPE/de.hs-ma.ws13.tpe.uib.g2.uebung4/kartendeck/Kartenwert.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/TPE/de.hs-ma.ws13.tpe.uib.g2.uebung4/tisch/Pot.java" afterPath="$PROJECT_DIR$/TPE/de.hs-ma.ws13.tpe.uib.g2.uebung4/tisch/Pot.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/TPE/de.hs-ma.ws13.tpe.uib.g2.uebung4/tisch/Spieler.java" afterPath="$PROJECT_DIR$/TPE/de.hs-ma.ws13.tpe.uib.g2.uebung4/tisch/Spieler.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/TPE/de.hs-ma.ws13.tpe.uib.g2.uebung4/casino/Tisch.java" afterPath="$PROJECT_DIR$/TPE/de.hs-ma.ws13.tpe.uib.g2.uebung4/casino/Tisch.java" />
+    <list default="true" id="debac8b4-560b-410e-ad55-50f623c84f47" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TPE_freiwilligeUebungen/oo1/aufgabeJ/Addierer.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TPE_freiwilligeUebungen/oo1/aufgabeK/AddiererVararg.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TPE_freiwilligeUebungen/oo1/aufgabeL/Amoebe.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TPE_freiwilligeUebungen/oo1/aufgabeL/Dackel.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TPE_freiwilligeUebungen/oo1/aufgabeGff/Figur.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TPE_freiwilligeUebungen/oo2/aufgabeBff/Form.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TPE_freiwilligeUebungen/oo1/aufgabeGff/Gerade.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TPE_freiwilligeUebungen/oo1/aufgabeL/Lebewesen.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TPE_freiwilligeUebungen/oo2/aufgabeBff/Quadrat.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TPE_freiwilligeUebungen/oo1/aufgabeGff/Rechteck.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TPE_freiwilligeUebungen/oo2/aufgabeBff/Rechteck.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TPE_freiwilligeUebungen/oo2/aufgabeF/Student.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TPE_freiwilligeUebungen/TPE_freiwilligeUebungen.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/modules.xml" afterPath="$PROJECT_DIR$/.idea/modules.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="TPE.iws" />
@@ -77,20 +80,7 @@
     <favorites_list name="TPE" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
-      <file leaf-file-name="CasinoSim.java" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/TPE/de.hs-ma.ws13.tpe.uib.g2.uebung4/casino/CasinoSim.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="62" column="49" selection-start="1529" selection-end="1529" vertical-scroll-proportion="1.0932722" vertical-offset="215" max-vertical-offset="1755">
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#535#544#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <leaf />
   </component>
   <component name="FindManager">
     <FindUsagesManager>
@@ -127,6 +117,24 @@
         <option value="$PROJECT_DIR$/TPE/de.hs-ma.ws13.tpe.uib.g2.uebung4/casino/Tisch.java" />
         <option value="$PROJECT_DIR$/TPE/de.hs-ma.ws13.tpe.uib.g2.uebung4/tisch/Spieler.java" />
         <option value="$PROJECT_DIR$/TPE/de.hs-ma.ws13.tpe.uib.g2.uebung4/casino/CasinoSim.java" />
+        <option value="$PROJECT_DIR$/TPE_freiwilligeUebungen/grundlagen/aufgabeG/Grossmacher.java" />
+        <option value="$PROJECT_DIR$/TPE_freiwilligeUebungen/oo1/Figur.java" />
+        <option value="$PROJECT_DIR$/TPE_freiwilligeUebungen/oo1/aufgabeG/Figur.java" />
+        <option value="$PROJECT_DIR$/TPE_freiwilligeUebungen/oo1/aufgabeG/Rechteck.java" />
+        <option value="$PROJECT_DIR$/TPE_freiwilligeUebungen/oo1/aufgabeGff/Rechteck.java" />
+        <option value="$PROJECT_DIR$/TPE_freiwilligeUebungen/oo1/aufgabeGff/Figur.java" />
+        <option value="$PROJECT_DIR$/TPE_freiwilligeUebungen/oo1/aufgabeGff/Gerade.java" />
+        <option value="$PROJECT_DIR$/TPE_freiwilligeUebungen/oo1/aufgabeJ/Addierer.java" />
+        <option value="$PROJECT_DIR$/TPE_freiwilligeUebungen/oo1/aufgabeK/AddiererVararg.java" />
+        <option value="$PROJECT_DIR$/TPE_freiwilligeUebungen/oo1/aufgabeL/Lebewesen.java" />
+        <option value="$PROJECT_DIR$/TPE_freiwilligeUebungen/oo1/aufgabeL/Amoebe.java" />
+        <option value="$PROJECT_DIR$/TPE_freiwilligeUebungen/oo1/aufgabeL/Dackel.java" />
+        <option value="$PROJECT_DIR$/TPE_freiwilligeUebungen/oo2/aufgabeB/aufgabeB.java" />
+        <option value="$PROJECT_DIR$/TPE_freiwilligeUebungen/oo2/aufgabeB/Form.java" />
+        <option value="$PROJECT_DIR$/TPE_freiwilligeUebungen/oo2/aufgabeBff/Form.java" />
+        <option value="$PROJECT_DIR$/TPE_freiwilligeUebungen/oo2/aufgabeBff/Rechteck.java" />
+        <option value="$PROJECT_DIR$/TPE_freiwilligeUebungen/oo2/aufgabeBff/Quadrat.java" />
+        <option value="$PROJECT_DIR$/TPE_freiwilligeUebungen/oo2/aufgabeF/Student.java" />
       </list>
     </option>
   </component>
@@ -210,8 +218,8 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="PackagesPane" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -226,7 +234,53 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="TPE_freiwilligeUebungen" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
               <option name="myItemId" value="TPE" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="TPE_freiwilligeUebungen" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="oo2" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="aufgabeF" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="TPE" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="TPE_freiwilligeUebungen" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="oo2" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="TPE" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="TPE_freiwilligeUebungen" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="oo1" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -237,50 +291,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="TPE" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="de.hs-ma.ws13.tpe.uib.g2.uebung4" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="tisch" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="TPE" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="TPE" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="de.hs-ma.ws13.tpe.uib.g2.uebung4" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="kartendeck" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="TPE" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="TPE" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="de.hs-ma.ws13.tpe.uib.g2.uebung4" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="casino" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -310,6 +320,10 @@
     <property name="dynamic.classpath" value="false" />
     <property name="FullScreen" value="false" />
     <property name="restartRequiresConfirmation" value="true" />
+    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.2" />
+    <property name="OverrideImplement.overriding.sorted" value="false" />
   </component>
   <component name="RecentsManager">
     <key name="CreateTestDialog.RecentsKey">
@@ -327,7 +341,7 @@
       <recent name="$PROJECT_DIR$/TPE/de.hs-ma.ws13.tpe.uib.g2.uebung4" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.CasinoSim">
+  <component name="RunManager">
     <configuration default="false" name="CasinoSim" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
@@ -387,34 +401,6 @@
       </RunnerSettings>
       <RunnerSettings RunnerId="Run" />
       <ConfigurationWrapper RunnerId="Debug" />
-      <ConfigurationWrapper RunnerId="Run" />
-      <method />
-    </configuration>
-    <configuration default="false" name="CasinoTestUnit" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
-        <pattern>
-          <option name="PATTERN" value="casino.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <module name="TPE" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="casino" />
-      <option name="MAIN_CLASS_NAME" value="casino.CasinoTestUnit" />
-      <option name="METHOD_NAME" />
-      <option name="TEST_OBJECT" value="class" />
-      <option name="VM_PARAMETERS" value="-ea" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="moduleWithDependencies" />
-      </option>
-      <envs />
-      <patterns />
-      <RunnerSettings RunnerId="Run" />
       <ConfigurationWrapper RunnerId="Run" />
       <method />
     </configuration>
@@ -663,16 +649,15 @@
       <option name="SHOW_LOGCAT_AUTOMATICALLY" value="true" />
       <method />
     </configuration>
-    <list size="4">
+    <list size="3">
       <item index="0" class="java.lang.String" itemvalue="Application.CasinoSim" />
       <item index="1" class="java.lang.String" itemvalue="JUnit.CasinoTest" />
       <item index="2" class="java.lang.String" itemvalue="JUnit.CasinoTestUnit" />
-      <item index="3" class="java.lang.String" itemvalue="JUnit.CasinoTestUnit" />
     </list>
     <recent_temporary>
       <list size="4">
-        <item index="0" class="java.lang.String" itemvalue="Application.CasinoSim" />
-        <item index="1" class="java.lang.String" itemvalue="JUnit.CasinoTestUnit" />
+        <item index="0" class="java.lang.String" itemvalue="JUnit.CasinoTestUnit" />
+        <item index="1" class="java.lang.String" itemvalue="Application.CasinoSim" />
         <item index="2" class="java.lang.String" itemvalue="JUnit.CasinoTestUnit" />
         <item index="3" class="java.lang.String" itemvalue="JUnit.CasinoTest" />
       </list>
@@ -712,7 +697,8 @@
       <workItem from="1387400221463" duration="6694000" />
       <workItem from="1387407216094" duration="94000" />
       <workItem from="1387431823510" duration="297000" />
-      <workItem from="1387482800272" duration="6819000" />
+      <workItem from="1387482800272" duration="7039000" />
+      <workItem from="1388497085172" duration="7263000" />
     </task>
     <task id="LOCAL-00001" summary="Konstruktor für Kartendeck hinzufegügt">
       <created>1385747021995</created>
@@ -762,11 +748,15 @@
       <created>1387406535980</created>
       <updated>1387406535980</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="fertig&#10;">
+      <created>1387489774725</created>
+      <updated>1387489774726</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="58382000" />
+    <option name="totallyTimeSpent" value="65865000" />
   </component>
   <component name="TodoView" selected-index="0">
     <todo-panel id="selected-file">
@@ -790,13 +780,14 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="22" width="1280" height="774" extended-state="6" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32874617" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32894737" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.398827" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -811,14 +802,13 @@
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24474959" sideWeight="0.6707317" order="1" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24474959" sideWeight="0.6707317" order="1" side_tool="false" content_ui="combo" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.43841642" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="CDI" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="3" side_tool="false" content_ui="combo" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="JetGradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32894737" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
@@ -843,7 +833,8 @@
     <MESSAGE value="FERTIIIIG!" />
     <MESSAGE value="FERTIIIIG!&#10;" />
     <MESSAGE value="FERTIIIIG! die2te&#10;" />
-    <option name="LAST_COMMIT_MESSAGE" value="FERTIIIIG! die2te&#10;" />
+    <MESSAGE value="fertig&#10;" />
+    <option name="LAST_COMMIT_MESSAGE" value="fertig&#10;" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -853,56 +844,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="jar:///System/Library/Java/JavaVirtualMachines/1.6.0.jdk/Contents/Classes/classes.jar!/java/util/Map.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="15" column="6" selection-start="311" selection-end="311" vertical-scroll-proportion="0.33280253" vertical-offset="0" max-vertical-offset="0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/TPE/de.hs-ma.ws13.tpe.uib.g2.uebung3/graph/Breitensuche.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="17" column="13" selection-start="482" selection-end="482" vertical-scroll-proportion="0.1178344" vertical-offset="0" max-vertical-offset="0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/TPE/de.hs-ma.ws13.tpe.uib.g2.uebung3/graph/GraphTestUnit.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="13" selection-start="190" selection-end="190" vertical-scroll-proportion="0.20642202" vertical-offset="0" max-vertical-offset="1815" />
-      </provider>
-    </entry>
-    <entry file="jar:///System/Library/Java/JavaVirtualMachines/1.6.0.jdk/Contents/Classes/classes.jar!/java/lang/Number.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="11" selection-start="286" selection-end="286" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="405" />
-      </provider>
-    </entry>
-    <entry file="jar://$APPLICATION_HOME_DIR$/lib/junit-4.10.jar!/org/junit/Assert.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="92" column="0" selection-start="5005" selection-end="5005" vertical-scroll-proportion="0.3529412" vertical-offset="1227" max-vertical-offset="1905" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/TPE/de.hs-ma.ws13.tpe.uib.g2.uebung3/graph/GraphSim.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="4" selection-start="144" selection-end="188" vertical-scroll-proportion="0.3146853" vertical-offset="0" max-vertical-offset="840" />
-      </provider>
-    </entry>
-    <entry file="jar:///System/Library/Java/JavaVirtualMachines/1.6.0.jdk/Contents/Classes/classes.jar!/java/lang/reflect/Method.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="87" column="0" selection-start="3946" selection-end="3946" vertical-scroll-proportion="0.8595944" vertical-offset="739" max-vertical-offset="1380" />
-      </provider>
-    </entry>
-    <entry file="jar:///System/Library/Java/JavaVirtualMachines/1.6.0.jdk/Contents/Classes/classes.jar!/java/lang/Math.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="77" column="22" selection-start="2562" selection-end="2562" vertical-scroll-proportion="0.0" vertical-offset="1021" max-vertical-offset="1935" />
-      </provider>
-    </entry>
-    <entry file="jar:///System/Library/Java/JavaVirtualMachines/1.6.0.jdk/Contents/Classes/classes.jar!/java/util/Arrays.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="235" column="25" selection-start="10547" selection-end="10547" vertical-scroll-proportion="0.0" vertical-offset="3395" max-vertical-offset="5010" />
-      </provider>
-    </entry>
-    <entry file="jar:///System/Library/Java/JavaVirtualMachines/1.6.0.jdk/Contents/Classes/classes.jar!/java/util/NoSuchElementException.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="7" column="11" selection-start="223" selection-end="223" vertical-scroll-proportion="0.2506964" vertical-offset="0" max-vertical-offset="359" />
-      </provider>
-    </entry>
     <entry file="jar:///System/Library/Java/JavaVirtualMachines/1.6.0.jdk/Contents/Classes/classes.jar!/java/util/Stack.class">
       <provider selected="true" editor-type-id="text-editor">
         <state line="15" column="26" selection-start="440" selection-end="440" vertical-scroll-proportion="0.33280507" vertical-offset="0" max-vertical-offset="631" />
@@ -925,8 +866,8 @@
           <OriginalElement>kartendeck</OriginalElement>
           <nodes>
             <node x="" y="">kartendeck.Kartenfarbe</node>
-            <node x="" y="">kartendeck.Kartenwert</node>
             <node x="" y="">kartendeck.Karte</node>
+            <node x="" y="">kartendeck.Kartenwert</node>
           </nodes>
           <notes />
           <edges />
@@ -962,13 +903,13 @@
             <node x="" y="">menschen</node>
             <node x="" y="">graph</node>
             <node x="" y="">sunw</node>
-            <node x="" y="">apple</node>
             <node x="" y="">javax</node>
+            <node x="" y="">apple</node>
             <node x="" y="">kartendeck</node>
             <node x="" y="">interfaces</node>
-            <node x="" y="">casino</node>
-            <node x="" y="">kontrolleinheit</node>
             <node x="" y="">java</node>
+            <node x="" y="">kontrolleinheit</node>
+            <node x="" y="">casino</node>
             <node x="" y="">unternehmen</node>
           </nodes>
           <notes />
@@ -987,8 +928,8 @@
           <ID>JAVA</ID>
           <OriginalElement>tisch</OriginalElement>
           <nodes>
-            <node x="" y="">tisch.Spieler</node>
             <node x="" y="">tisch.Kartendeck</node>
+            <node x="" y="">tisch.Spieler</node>
             <node x="" y="">tisch.Pot</node>
           </nodes>
           <notes />
@@ -1034,8 +975,8 @@
           <ID>JAVA</ID>
           <OriginalElement>tisch</OriginalElement>
           <nodes>
-            <node x="" y="">tisch.Spieler</node>
             <node x="" y="">tisch.Kartendeck</node>
+            <node x="" y="">tisch.Spieler</node>
             <node x="" y="">tisch.Pot</node>
           </nodes>
           <notes />
@@ -1061,8 +1002,8 @@
           <nodes>
             <node x="" y="">casino.Tisch</node>
             <node x="" y="">casino.KartenMischer</node>
-            <node x="" y="">casino.CasinoTest</node>
             <node x="" y="">casino.Tisch.Dealer</node>
+            <node x="" y="">casino.CasinoTest</node>
             <node x="" y="">casino.CasinoSim</node>
             <node x="" y="">casino.Casino</node>
           </nodes>
@@ -1088,8 +1029,8 @@
           <OriginalElement>kartendeck</OriginalElement>
           <nodes>
             <node x="" y="">kartendeck.Kartenfarbe</node>
-            <node x="" y="">kartendeck.Kartenwert</node>
             <node x="" y="">kartendeck.Karte</node>
+            <node x="" y="">kartendeck.Kartenwert</node>
           </nodes>
           <notes />
           <edges />
@@ -1191,131 +1132,258 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/TPE/de.hs-ma.ws13.tpe.uib.g2.uebung4/kartendeck/Kartenfarbe.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="26" selection-start="245" selection-end="245" vertical-scroll-proportion="0.2522936" vertical-offset="0" max-vertical-offset="654">
-          <folding />
-        </state>
+        <state line="11" column="26" selection-start="245" selection-end="245" vertical-scroll-proportion="0.2522936" vertical-offset="0" max-vertical-offset="654" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/TPE/de.hs-ma.ws13.tpe.uib.g2.uebung4/kartendeck/Karte.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="40" column="37" selection-start="783" selection-end="783" vertical-scroll-proportion="0.8715596" vertical-offset="0" max-vertical-offset="945">
-          <folding />
-        </state>
+        <state line="40" column="37" selection-start="783" selection-end="783" vertical-scroll-proportion="0.8715596" vertical-offset="0" max-vertical-offset="945" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/TPE/de.hs-ma.ws13.tpe.uib.g2.uebung4/tisch/Kartendeck.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="34" column="37" selection-start="723" selection-end="723" vertical-scroll-proportion="0.51834863" vertical-offset="126" max-vertical-offset="780">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/TPE/de.hs-ma.ws13.tpe.uib.g2.uebung4/casino/CasinoTestUnit.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="345" column="0" selection-start="10426" selection-end="10426" vertical-scroll-proportion="4.3715596" vertical-offset="2316" max-vertical-offset="5340">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
+        <state line="34" column="37" selection-start="723" selection-end="723" vertical-scroll-proportion="0.51834863" vertical-offset="126" max-vertical-offset="780" />
       </provider>
     </entry>
     <entry file="jar:///System/Library/Java/JavaVirtualMachines/1.6.0.jdk/Contents/Classes/classes.jar!/java/lang/Object.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="31" column="19" selection-start="956" selection-end="956" vertical-scroll-proportion="0.0" vertical-offset="196" max-vertical-offset="555">
-          <folding />
-        </state>
+        <state line="31" column="19" selection-start="956" selection-end="956" vertical-scroll-proportion="0.0" vertical-offset="196" max-vertical-offset="555" />
       </provider>
     </entry>
     <entry file="jar:///System/Library/Java/JavaVirtualMachines/1.6.0.jdk/Contents/Classes/classes.jar!/java/util/AbstractList.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="31" column="37" selection-start="985" selection-end="985" vertical-scroll-proportion="0.0" vertical-offset="323" max-vertical-offset="1185">
-          <folding />
-        </state>
+        <state line="31" column="37" selection-start="985" selection-end="985" vertical-scroll-proportion="0.0" vertical-offset="323" max-vertical-offset="1185" />
       </provider>
     </entry>
     <entry file="jar:///System/Library/Java/JavaVirtualMachines/1.6.0.jdk/Contents/Classes/classes.jar!/java/lang/String.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="55" column="4" selection-start="2025" selection-end="2025" vertical-scroll-proportion="0.33236995" vertical-offset="695" max-vertical-offset="3135">
-          <folding />
-        </state>
+        <state line="55" column="4" selection-start="2025" selection-end="2025" vertical-scroll-proportion="0.33236995" vertical-offset="695" max-vertical-offset="3135" />
       </provider>
     </entry>
     <entry file="jar:///System/Library/Java/JavaVirtualMachines/1.6.0.jdk/Contents/Classes/classes.jar!/java/util/HashMap.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="58" column="13" selection-start="2029" selection-end="2029" vertical-scroll-proportion="0.33236995" vertical-offset="740" max-vertical-offset="3000">
-          <folding />
-        </state>
+        <state line="58" column="13" selection-start="2029" selection-end="2029" vertical-scroll-proportion="0.33236995" vertical-offset="740" max-vertical-offset="3000" />
       </provider>
     </entry>
     <entry file="jar:///System/Library/Java/JavaVirtualMachines/1.6.0.jdk/Contents/Classes/classes.jar!/java/lang/Integer.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="29" column="35" selection-start="1207" selection-end="1207" vertical-scroll-proportion="0.33236995" vertical-offset="305" max-vertical-offset="1650">
-          <folding />
-        </state>
+        <state line="29" column="35" selection-start="1207" selection-end="1207" vertical-scroll-proportion="0.33236995" vertical-offset="305" max-vertical-offset="1650" />
       </provider>
     </entry>
     <entry file="jar:///System/Library/Java/JavaVirtualMachines/1.6.0.jdk/Contents/Classes/classes.jar!/java/util/LinkedList.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="47" column="13" selection-start="1563" selection-end="1563" vertical-scroll-proportion="0.3116531" vertical-offset="575" max-vertical-offset="2340">
-          <folding />
-        </state>
+        <state line="47" column="13" selection-start="1563" selection-end="1563" vertical-scroll-proportion="0.3116531" vertical-offset="575" max-vertical-offset="2340" />
       </provider>
     </entry>
     <entry file="jar:///System/Library/Java/JavaVirtualMachines/1.6.0.jdk/Contents/Classes/classes.jar!/java/util/AbstractSequentialList.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="19" column="33" selection-start="630" selection-end="630" vertical-scroll-proportion="0.64659685" vertical-offset="23" max-vertical-offset="405">
-          <folding />
-        </state>
+        <state line="19" column="33" selection-start="630" selection-end="630" vertical-scroll-proportion="0.64659685" vertical-offset="23" max-vertical-offset="405" />
       </provider>
     </entry>
     <entry file="jar:///System/Library/Java/JavaVirtualMachines/1.6.0.jdk/Contents/Classes/classes.jar!/java/io/PrintStream.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="78" column="16" selection-start="2909" selection-end="2909" vertical-scroll-proportion="0.3116531" vertical-offset="1040" max-vertical-offset="1650">
-          <folding />
-        </state>
+        <state line="78" column="16" selection-start="2909" selection-end="2909" vertical-scroll-proportion="0.3116531" vertical-offset="1040" max-vertical-offset="1650" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/TPE/de.hs-ma.ws13.tpe.uib.g2.uebung4/tisch/Spieler.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="19" column="13" selection-start="547" selection-end="547" vertical-scroll-proportion="0.63380283" vertical-offset="30" max-vertical-offset="1695">
-          <folding>
-            <element signature="e#1779#1780#0" expanded="true" />
-            <element signature="e#1800#1801#0" expanded="true" />
-          </folding>
-        </state>
+        <state line="19" column="13" selection-start="547" selection-end="547" vertical-scroll-proportion="0.63380283" vertical-offset="30" max-vertical-offset="1695" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/TPE/de.hs-ma.ws13.tpe.uib.g2.uebung4/casino/Casino.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="64" column="0" selection-start="1352" selection-end="1352" vertical-scroll-proportion="0.33521128" vertical-offset="766" max-vertical-offset="1515">
-          <folding>
-            <element signature="e#1375#1376#0" expanded="true" />
-          </folding>
-        </state>
+        <state line="64" column="0" selection-start="1352" selection-end="1352" vertical-scroll-proportion="0.33521128" vertical-offset="766" max-vertical-offset="1515" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/TPE/de.hs-ma.ws13.tpe.uib.g2.uebung4/casino/Tisch.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="134" column="0" selection-start="3623" selection-end="3623" vertical-scroll-proportion="-3.2676055" vertical-offset="3050" max-vertical-offset="3405">
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#3942#3951#0" expanded="true" />
-            <element signature="e#4016#4025#0" expanded="true" />
-            <element signature="e#4086#4095#0" expanded="true" />
-          </folding>
-        </state>
+        <state line="134" column="0" selection-start="3623" selection-end="3623" vertical-scroll-proportion="-3.2676055" vertical-offset="3050" max-vertical-offset="3405" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/TPE/de.hs-ma.ws13.tpe.uib.g2.uebung4/casino/CasinoSim.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="62" column="49" selection-start="1529" selection-end="1529" vertical-scroll-proportion="1.0932722" vertical-offset="215" max-vertical-offset="1755">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1755" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TPE/de.hs-ma.ws13.tpe.uib.g2.uebung4/casino/CasinoTestUnit.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="345" column="0" selection-start="10426" selection-end="10426" vertical-scroll-proportion="8.053521" vertical-offset="2316" max-vertical-offset="5340" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TPE_freiwilligeUebungen/oo1/aufgabeGff/Gerade.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="315">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TPE_freiwilligeUebungen/oo1/aufgabeGff/Rechteck.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="11" column="30" selection-start="202" selection-end="202" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="315">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TPE_freiwilligeUebungen/oo1/aufgabeGff/Figur.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="13" column="4" selection-start="180" selection-end="180" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="405">
           <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#535#544#0" expanded="true" />
+            <element signature="e#250#251#0" expanded="true" />
+            <element signature="e#285#286#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/TPE_freiwilligeUebungen/oo1/aufgabeJ/Addierer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="13" column="63" selection-start="88" selection-end="273" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="450">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TPE_freiwilligeUebungen/oo1/aufgabeK/AddiererVararg.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="20" column="21" selection-start="429" selection-end="429" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="435">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TPE_freiwilligeUebungen/oo1/aufgabeL/Dackel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="15" column="58" selection-start="294" selection-end="294" vertical-scroll-proportion="0.3440367" vertical-offset="0" max-vertical-offset="654">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TPE_freiwilligeUebungen/oo1/aufgabeL/Amoebe.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="7" column="13" selection-start="117" selection-end="117" vertical-scroll-proportion="0.16055046" vertical-offset="0" max-vertical-offset="654">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TPE_freiwilligeUebungen/oo1/aufgabeL/Lebewesen.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="7" column="27" selection-start="116" selection-end="116" vertical-scroll-proportion="0.16055046" vertical-offset="0" max-vertical-offset="654">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TPE_freiwilligeUebungen/oo2/aufgabeBff/Rechteck.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="23" column="16" selection-start="464" selection-end="464" vertical-scroll-proportion="0.5275229" vertical-offset="0" max-vertical-offset="654">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TPE_freiwilligeUebungen/oo2/aufgabeF/Student.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="24" column="8" selection-start="568" selection-end="577" vertical-scroll-proportion="0.5504587" vertical-offset="0" max-vertical-offset="654">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TPE_freiwilligeUebungen/oo2/aufgabeBff/Quadrat.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="8" column="39" selection-start="198" selection-end="198" vertical-scroll-proportion="0.18348624" vertical-offset="0" max-vertical-offset="654">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TPE_freiwilligeUebungen/oo2/aufgabeBff/Form.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="7" column="10" selection-start="99" selection-end="105" vertical-scroll-proportion="0.16055046" vertical-offset="0" max-vertical-offset="654">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+  </component>
+  <component name="masterDetails">
+    <states>
+      <state key="ArtifactsStructureConfigurable.UI">
+        <settings>
+          <artifact-editor />
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="FacetStructureConfigurable.UI">
+        <settings>
+          <last-edited>No facets are configured</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="GlobalLibrariesConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="JdkListConfigurable.UI">
+        <settings>
+          <last-edited>1.6</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ModuleStructureConfigurable.UI">
+        <settings>
+          <last-edited>TPE_freiwilligeUebungen</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+                <option value="0.6" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ProjectJDKs.UI">
+        <settings>
+          <last-edited>1.6</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ProjectLibrariesConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+    </states>
   </component>
 </project>
 
