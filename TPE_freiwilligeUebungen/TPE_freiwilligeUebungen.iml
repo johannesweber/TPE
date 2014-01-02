@@ -6,6 +6,11 @@
       <sourceFolder url="file://$MODULE_DIR$/grundlagen" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/oo1" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/oo2" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/exceptions" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/generischeTypen" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/innereKlassen" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/collections" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/threads" isTestSource="false" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
