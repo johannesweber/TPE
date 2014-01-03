@@ -1,7 +1,5 @@
 package aufgabeD;
 
-import java.util.Arrays;
-
 /**
  * Created by Johannes on 02.01.14.
  */
