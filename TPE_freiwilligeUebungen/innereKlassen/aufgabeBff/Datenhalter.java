@@ -5,19 +5,16 @@ package aufgabeBff;
  */
 public class Datenhalter {
 
-    private int attribut;
+    private int attribut = 5;
 
     public Datenhalter(int attribut) {
         this.attribut = attribut;
     }
 
-    public Beobachter getAttribut(){
-        return new DatenhalterInnen();
-    }
-
     private class DatenhalterInnen implements Beobachter {
+
         public int getValue() {
-            return Datenhalter.this.attribut;
+            return attribut;
         }
     }
 }

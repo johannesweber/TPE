@@ -11,6 +11,7 @@
       <sourceFolder url="file://$MODULE_DIR$/innereKlassen" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/collections" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/threads" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/folien" isTestSource="false" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
