@@ -1,9 +1,9 @@
 Techniken der Programmentwicklung WS1314
 ===
 
-This repository is a collection of all of my programming exersises i had to do in "Techniken der Programmentwicklung"
+This repository is a collection of all of my programming exersises i had to do in "Techniken der Programmentwicklung".
 
-All this excersies are written in Java.
+All this excersies are written in Java and only exectuable directly in a Java IDE. I used PhpStorm to develop these programs.
 
 Exersise 1:
 
