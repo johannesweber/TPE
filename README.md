@@ -1,6 +1,6 @@
-TPE
+Techniken der Programmentwicklung WS1314
 ===
 
-Willkommen in meinem GitHub-Verzeichnis...
+This repository is a collection of all of my programming excersises i had to do in "Techniken der Programmentwicklung"
 
-MfG Joo
+All this excersies are written in Java.
